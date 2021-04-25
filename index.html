@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cillum: Кто мы такие?</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<body>
+	<div class="bg"></div>
+	<div class="menu">
+		<div class="menu-list">
+			<a onclick="OpenPage(0);"><li>О нас</li></a>
+			<a onclick="OpenPage(1);"><li>Что мы умеем</li></a>
+			<a onclick="OpenPage(2);"><li>Наши проекты</li></a>
+		</div>
+	</div>
+
+	<h1>Cillum</h1>
+	<div class="info" id="info-block">
+		<p id="text"></p>
+	</div>
+
+	<script type="text/javascript">
+		var elem = document.getElementById("text");
+
+		function OpenPage(index) 
+		{
+			let text = "";
+
+			switch(index)
+			{
+				case 0:
+					text = "<b>Cillum</b> - это небольшая группа молодых разработчиков, объединёных общими идеями. <br><br><b>Cillum</b> - это люди, которые хотят творить и создавать используя для этого все фишки и возможности 21-го века.<br><br><b>Cillum</b> - это друзья, собирающиеся после учёбы в кафе и обсуждаю новые идеи и проекты.";
+				break;
+
+				case 1:
+					text = "В нашей команде люди с разными взглядами. Кто-то любит <b>создавать сайты</b>, кто-то находит умиротворение в <b>написании плагинов для видеоигры Minecraft</b>, а для кого-то хорошим времяпрепровождением становится <b>создание своих небольших 2D инди игр</b>.<br>Основными языками программирования у нас в команде являются <b>Python, PHP, Java, JS, GML</b>. Однако для многих из нас не составит труда изучить новый язык/фреймворк/платформу. Также нам очень легко переключаться с одних проектов на другие, даже если они реализованы на разных языках.<br>Кроме программирования, некоторые из нас работают с операционной системой <b>Linux</b> и даже используют как основную на своих компьютерах.";
+				break;
+
+				case 2:
+					text = "GitHub'ы некоторых участников команды Cillum:<br><a target='_blank' href='https://github.com/mdpanf' >https://github.com/mdpanf</a> - <a href='https://vk.com/mdpanf'>Максим Панфилов</a><br><a target='_blank' href='https://github.com/aver005' >https://github.com/aver005</a> - <a href='https://vk.com/aver005'>Аверьянов Артемий</a><br>";
+				break;
+			}
+
+      		elem.innerHTML = text;
+		}
+
+		OpenPage(0);
+	</script>
+</body>
+</html>
